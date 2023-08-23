@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>自動ログインのテスト</title>
+        <script type="text/javascript">
+            function saveClick(){
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>自動ログインのテスト</h1>
+        <form action="/login" method="post" name="frmLogin" onsubmit="saveClick();">
+            <input type="text" name="loginid" placeholder="ユーザーID" value="" class="form-control">
+            <input type="password" name="password" placeholder="パスワード" value="" class="form-control">
+                <div>
+                    <input type="checkbox" id="save" name="save" checked>
+                    <label for="save">入力を保存する</label>
+                </div>
+            <button type="submit" class="" aria-pressed="true">ログイン</button>
+            <input type="hidden" name="clientid" value="">
+            <input type="hidden" name="_csrfToken" value="">
+        </form>
+    </body>
+</html>
