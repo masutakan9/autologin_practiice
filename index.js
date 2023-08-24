@@ -9,7 +9,7 @@ app.post('/login', (req, res) => {
     res.send('logged in.');
 });
 
-var port = 3000;
-app.listen(port, function(){
+var port = process.env.PORT || 3001;
+app.listen(port, () => {
     console.log("Express server start on port: %d, mode: %s.", port, app.settings.env);
 });
