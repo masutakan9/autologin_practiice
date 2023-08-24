@@ -4,9 +4,12 @@ var app = express();
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
+app.get('/login_success.html', (req, res) => {
+    res.sendFile(__dirname + '/login_success.html');
+});
 
 app.post('/login', (req, res) => {
-    res.send('logged in.');
+    res.redirect(302, 'https://autologin-practice.onrender.com');
 });
 
 var port = process.env.PORT || 3001;
