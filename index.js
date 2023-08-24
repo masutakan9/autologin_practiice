@@ -9,7 +9,7 @@ app.get('/login_success.html', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    res.redirect(302, 'https://autologin-practice.onrender.com');
+    res.redirect(302, 'https://autologin-practice.onrender.com/login_success.html');
 });
 
 var port = process.env.PORT || 3001;
